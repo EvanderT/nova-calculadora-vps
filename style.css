@@ -7,12 +7,12 @@ form.calculadora{
 }
 
 .calculadora .propriedades{
-    width: 50%;
+    width: 60%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
 }
 
 .propriedades .propriedade{
@@ -37,7 +37,7 @@ form.calculadora{
 
 
 .calculadora .custo_total{
-    width: 50%;
+    width: 40%;
     padding: 2rem;
     display: flex;
     justify-content: center;
