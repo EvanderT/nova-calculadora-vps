@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function () {
             let contador = propriedade.querySelector('.range_count');
             let inputRange = propriedade.querySelector('.range_input');
 
+            //Deixar todos valores no mínimo ao iniciar
+            inputRange.value = inputRange.min;
+
             actualizarVariaveisPrecos(inputRange);
 
             //Adicionar o listener para que 
