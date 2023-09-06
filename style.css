@@ -7,7 +7,7 @@ form.calculadora{
 }
 
 .calculadora .propriedades{
-    width: 60%;
+    width: 100%;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -37,7 +37,7 @@ form.calculadora{
 
 
 .calculadora .custo_total{
-    width: 40%;
+    width: 100%;
     padding: 2rem;
     display: flex;
     justify-content: center;

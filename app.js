@@ -71,23 +71,23 @@ document.addEventListener('DOMContentLoaded', function () {
         //Atribuir valores as variáveis de preços com base no id do input do tipo range
         switch (elemento.id) {
             case 'cores_value':
-                coresValue = parseInt(elemento.value) * 1000;
+                coresValue = parseInt(elemento.value) * 1550;
                 break;
 
             case 'ram_value':
-                ramValue = parseInt(elemento.value)*2000;
+                ramValue = parseInt(elemento.value)*895;
                 break;
 
             case 'storage_value':
-                storageValue = parseInt(elemento.value)*50;
+                storageValue = parseInt(elemento.value)*25;
                 break;
 
             case 'band_value':
-                bandValue = parseInt(elemento.value)*25;
+                bandValue = parseInt(elemento.value)*10;
                 break;
 
             case 'ip_value':
-                ipValue = parseInt(elemento.value)*(0);
+                ipValue = parseInt(elemento.value)*(2000);
                 break;
         }
 

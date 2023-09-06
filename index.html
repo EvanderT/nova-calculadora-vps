@@ -11,10 +11,15 @@
 <body>
     
     <section class="container p-5">
-        <h2 class="text-info fw-bold">Calculadora de Hospedagem VPS</h2>
-        <hr>
+
+
         <form class="calculadora">
+
             <div class="propriedades">
+                <div>
+                    <h2 class="text-info fw-bold">Calculadora de Hospedagem VPS</h2>
+                    <hr>
+                </div>
                 <div class="propriedade">
                     <label>Cores</label>
                     <div class="input_area">
@@ -54,13 +59,13 @@
                         <span class="range_count">0</span>
                     </div>                 
                 </div>
-
+                <div class="custo_total">
+                    <label>Total</label>
+                    <input id="custo_total" type="text" value="0" disabled>
+                    <span class="moeda">Kz</span>
+                </div>
             </div>
-            <div class="custo_total">
-                <label>Total</label>
-                <input id="custo_total" type="text" value="0" disabled>
-                <span class="moeda">Kz</span>
-            </div>
+           
         </form>
     </section>
 
