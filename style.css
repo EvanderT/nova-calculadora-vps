@@ -1,0 +1,35 @@
+
+form.calculadora{
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.calculadora .propriedade{
+
+}
+
+
+.input_area{
+    position: relative;
+}
+
+.input_area .range_count{
+    position: absolute;
+    text-align: center;
+    min-width: 40px;
+    height: auto;
+    background: #29a9ff;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    top:-25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.range_input{
+    color: #ca4545;
+    width: 100%;
+}
