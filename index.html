@@ -16,24 +16,25 @@
         <form class="calculadora">
             <div class="propriedades">
                 <div class="propriedade">
+                    <label>Cores</label>
                     <div class="input_area">
                         <input type="range" min="1" max="8" class="range_input" style="border-radius: 15px;">
                         <span class="range_count" id="cores_count">0</span>
                     </div>
-                    <label>Cores</label>
                 </div>
 
                 <div class="propriedade">
+                    <label>RAM(GB)</label>
                     <div class="input_area">
                         <input type="range" min="2" max="12" class="range_input" style="border-radius: 15px;">
                         <span class="range_count" id="ram_count">0</span>
-                    </div>
-                    <label>RAM(GB)</label>
+                    </div>                 
                 </div>
             </div>
             <div class="custo_total">
-                <span>Valor Total</span>
-                <span>50.000Kz</span>
+                <label>Total</label>
+                <input id="custo_total" type="text" value="0" disabled>
+                <span class="moeda">Kz</span>
             </div>
         </form>
     </section>

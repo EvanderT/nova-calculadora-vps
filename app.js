@@ -1,8 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-
+    let totalPagamento = 0;
+    let totalPagamentoInfo = document.getElementById('custo_total');
 
     function actualizarCalculadora() {
+        let coresValue = 0;
+        let ramValue = 0;
+
         //capturar todos os conjuntos de propriedade da calculadora
         let propriedadesCalculadora = document.querySelectorAll('.propriedade');
 
@@ -11,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let inputRange = propriedade.querySelector('.range_input');
 
             actualizarElementos(contador,inputRange.value);
-            
+
             inputRange.addEventListener('input', function () {
                 actualizarElementos(contador,this.value);
             });
@@ -20,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function actualizarElementos(elemento,valor){
         elemento.textContent = valor;
+        totalPagamentoInfo.textContent = totalPagamento;
     }
 
     actualizarCalculadora();
