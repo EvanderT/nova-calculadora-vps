@@ -11,9 +11,14 @@ document.addEventListener('DOMContentLoaded', function () {
     //Multiplicadores
     let coreMultiplier = 1550;
     let ramMultiplier = 895;
-    let storageMultiplier = 25;
+    let storageMultiplier = 60;
     let bandgeMultiplier = 10;
     let ipMultiplier = 2000;
+
+    //Deixar todos valores dos inputs no mínimo ao iniciar
+    document.querySelectorAll('input[type=range]').forEach(function(input){
+        input.value = input.min;
+    })
 
     //capturar todos os conjuntos de propriedade da calculadora
     let listaPropriedades = document.querySelectorAll('.propriedade');
@@ -43,8 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let contador = propriedade.querySelector('.range_count');
             let inputRange = propriedade.querySelector('.range_input');
 
-            //Deixar todos valores no mínimo ao iniciar
-            inputRange.value = inputRange.min;
+
 
             actualizarVariaveisPrecos(inputRange);
 
@@ -52,14 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
             inputRange.addEventListener('input', function () {
                 actualizarVariaveisPrecos(this);
                 actualizarElementos(contador, this.value);
-                actualizarCustoPagamento(coresValue, ramValue,storageValue,bandValue,ipValue);
+                actualizarCustoPagamento(coresValue, ramValue, storageValue, bandValue, ipValue);
 
             });
 
             actualizarElementos(contador, inputRange.value);
         });
 
-        actualizarCustoPagamento(coresValue, ramValue,storageValue,bandValue,ipValue);
+        actualizarCustoPagamento(coresValue, ramValue, storageValue, bandValue, ipValue);
 
     }
 
@@ -67,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         elemento.textContent = valor;
     }
 
-    function actualizarCustoPagamento(coresValue, ramValue,storageValue,bandValue,ipValue) {
+    function actualizarCustoPagamento(coresValue, ramValue, storageValue, bandValue, ipValue) {
         totalPagamento = parseInt(ramValue) + parseInt(coresValue) + parseInt(storageValue) + parseInt(bandValue) + parseInt(ipValue);
         totalPagamentoInfo.value = totalPagamento;
     }
@@ -80,19 +84,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
 
             case 'ram_value':
-                ramValue = parseInt(elemento.value)*ramMultiplier;
+                ramValue = parseInt(elemento.value) * ramMultiplier;
                 break;
 
             case 'storage_value':
-                storageValue = parseInt(elemento.value)*storageMultiplier;
+                storageValue = parseInt(elemento.value) * storageMultiplier;
                 break;
 
             case 'band_value':
-                bandValue = parseInt(elemento.value)*bandgeMultiplier;
+                bandValue = parseInt(elemento.value) * bandgeMultiplier;
                 break;
 
             case 'ip_value':
-                ipValue = parseInt(elemento.value)*ipMultiplier;
+                ipValue = parseInt(elemento.value) * ipMultiplier;
                 break;
         }
 
@@ -107,24 +111,24 @@ document.addEventListener('DOMContentLoaded', function () {
     let tiposArmazenamentos = document.querySelectorAll('.storage_type');
     let storageSSD = true;
 
-    tiposArmazenamentos.forEach(function(tipoArmazenamento){
-        tipoArmazenamento.addEventListener('click',alterarTipoDeArmazenamento);
+    tiposArmazenamentos.forEach(function (tipoArmazenamento) {
+        tipoArmazenamento.addEventListener('click', alterarTipoDeArmazenamento);
     })
 
-    function alterarTipoDeArmazenamento(){
-        tiposArmazenamentos.forEach(function(tipoArmazenamento){
+    function alterarTipoDeArmazenamento() {
+        tiposArmazenamentos.forEach(function (tipoArmazenamento) {
             tipoArmazenamento.classList.toggle('active');
-            
+
         });
         containetTipoArmazenamento.classList.toggle('active');
 
-        if(storageSSD){
+        if (storageSSD) {
             storageSSD = false;
-            storageMultiplier= 25;
+            storageMultiplier = 25;
         }
-        else{
+        else {
             storageSSD = true;
-            storageMultiplier= 60;
+            storageMultiplier = 60;
         }
 
         actualizarCalculadora(listaPropriedades);
