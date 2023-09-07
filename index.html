@@ -17,8 +17,7 @@
 
             <div class="propriedades">
                 <div class="">
-                    <h2 class="text-info fw-bold">Calculadora de Hospedagem VPS LINUX</h2>
-                    <hr>
+                    <h4 class="text-info fw-bold">Calculadora de Hospedagem VPS LINUX</h4>
                 </div>
                 <div class="propriedade">
                     <label>Cores</label>
@@ -31,13 +30,19 @@
                 <div class="propriedade">
                     <label>RAM(GB)</label>
                     <div class="input_area">
-                        <input type="range" id="ram_value" min="2" max="12" class="range_input" style="border-radius: 15px;">
+                        <input type="range" id="ram_value" min="2" max="12" step="2" class="range_input" style="border-radius: 15px;">
                         <span class="range_count">0</span>
                     </div>                 
                 </div>
 
                 <div class="propriedade">
-                    <label>Armazenamento HDD (GB)</label>
+                    <label>
+                        Armazenamento (GB) 
+                        <div class="storage_group">
+                            <span class="storage_type active">SSD</span> 
+                            <span class="storage_type" >HDD</span>
+                        </div>
+                     </label>
                     <div class="input_area">
                         <input type="range" id="storage_value" min="30" max="200" class="range_input" style="border-radius: 15px;">
                         <span class="range_count">0</span>
@@ -60,7 +65,7 @@
                     </div>                 
                 </div>
                 <div class="custo_total">
-                    <label>Total</label>
+                    <label>Total Mensal</label>
                     <input id="custo_total" type="text" value="0" disabled>
                     <span class="moeda">Kz</span>
                 </div>
