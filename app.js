@@ -120,11 +120,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if(storageSSD){
             storageSSD = false;
-            storageMultiplier= 60;
+            storageMultiplier= 25;
         }
         else{
             storageSSD = true;
-            storageMultiplier= 25;
+            storageMultiplier= 60;
         }
 
         actualizarCalculadora(listaPropriedades);
